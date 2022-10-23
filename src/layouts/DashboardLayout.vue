@@ -140,8 +140,8 @@ export default {
 			selectedItem: 0,
 			items: [
 				{ text: 'Home', icon: 'mdi-home' },
-				{ text: 'Trending', icon: 'mdi-trending-up' },
-				{ text: 'Playlist', icon: 'mdi-playlist-play' },
+				{ text: 'Project', icon: 'mdi-trending-up' },
+				{ text: 'Category', icon: 'mdi-playlist-play' },
 				{ text: 'Bookmark', icon: 'mdi-bookmark' },
 				{ text: 'Live Stream', icon: 'mdi-motion-play' },
 				{ text: 'Tutorial', icon: 'mdi-cloud-question' },

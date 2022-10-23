@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import about from "../views/AboutView.vue";
+import auth from "../views/Auth.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,11 @@ const routes = [
     name: "about",
     component: about,
   },
+  {
+    path: "/auth",
+    name: "auth",
+    component: auth,
+  }
 ];
 
 const router = new VueRouter({
