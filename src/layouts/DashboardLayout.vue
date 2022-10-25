@@ -5,7 +5,7 @@
 
 			<h2 class="my-4 text-center white--text francois-one">kITabantuin</h2>
 
-			<v-list flat dense class="ml-5">
+			<!-- <v-list flat dense class="ml-5">
 				<v-subheader>MENU</v-subheader>
 				<v-list-item-group v-model="selectedItem" color="primary">
 					<v-list-item v-for="(item, i) in items" :key="i" class="py-0">
@@ -23,20 +23,22 @@
 						</router-link>
 					</v-list-item>
 				</v-list-item-group>
-			</v-list>
+			</v-list> -->
+			<Sidebar />
 
 			<v-divider class="mx-auto mb-2" inset></v-divider>
 
 			<div class="text-overline text-center">Copyright</div>
+			<div class="text-subtitle-2 text-center">kITaBantuin.co</div>
 
-			<div class="text-subtitle-2 text-center">Design By <a href="https://dribbble.com/dwinawan">dwinawan</a>
+			<!-- <div class="text-subtitle-2 text-center">Design By <a href="https://dribbble.com/dwinawan">dwinawan</a>
 			</div>
 
 			<div class="text-subtitle-2 text-center">Coded By <a href="https://github.com/Abdurozzaq">Abdurozzaq Nurul
 					Hadi</a></div>
 
 			<div class="text-subtitle-2 text-center">Images By <a
-					href="https://unsplash.com/s/photos/skateboard">Unsplash</a></div>
+					href="https://unsplash.com/s/photos/skateboard">Unsplash</a></div> -->
 
 		</v-navigation-drawer>
 
@@ -99,7 +101,11 @@
 
 					<v-list>
 						<v-list-item v-for="(item, i) in avatarDrops" :key="i">
-							<v-list-item-title>{{ item.title }}</v-list-item-title>
+							<v-list-item-title>
+								<router-link :to="item.title" class="text-decoration-none">
+									{{ item.title }}
+								</router-link>
+							</v-list-item-title>
 						</v-list-item>
 					</v-list>
 				</v-menu>
@@ -132,7 +138,11 @@
 </template>
 
 <script>
+import Sidebar from '../components/SideBar.vue';
 export default {
+	components: {
+		Sidebar
+	},
 	data() {
 		return {
 			drawer: true,
